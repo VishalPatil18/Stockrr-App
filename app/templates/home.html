@@ -3,7 +3,7 @@
 {% block title %}Home Page{% endblock %}
 
 {% block body %}
-    <header class="bgImg h-screen" style="background: url(../static/src/assets/bgImg.jpg) no-repeat fixed; background-size: 100% 100%; background-size: cover;">
+    <header class="bgImg h-screen" style="background: url(../static/src/assets/bgImg.webp) no-repeat fixed; background-size: 100% 100%; background-size: cover;">
       {% include 'includes/_navbar.html' %}
       <div class="mt-16 mx-auto backdrop-filter backdrop-blur-lg bg-opacity-70 bg-gray-800 border-2 border-white rounded-xl p-5 w-5/6 sm:w-2/3">
         <p class="text-white font-light italic" style="font-size: 25px;">
@@ -30,17 +30,17 @@
         <div class="transform -translate-y-24 shadow-xl bg-white px-10 py-6 italic">
             <h4 class="text-gray-800">Now</h4>
             <h1 class="text-gray-800"><span class="uppercase text-purple-600 font-extrabold ml-10" style="font-size: 45px; font-style: normal;">Predict</span> Stock Prices Easily and accurately</h1>
-            <div class="">Add prediction image here</div>
+            <img class="w-full" src="{{ url_for('static',filename='src/assets/predict.png') }}" alt="Prediction Image" />
         </div>
         <div class="transform -translate-y-12 shadow-xl bg-white px-10 py-6 italic">
           <h4 class="text-gray-800">Now</h4>
           <h1 class="text-gray-800"><span class="uppercase text-pink-600 font-extrabold ml-10" style="font-size: 45px; font-style: normal;">Compare</span> Between different Stocks just by one click</h1>
-          <div class="">Add comparison image here</div>
+          <div class="text-red-500 text-3xl font-bold text-center" style="font-style: normal;">COMING SOON</div>
         </div>
         <div class="transform -translate-y-0 shadow-xl bg-white px-10 py-6 italic">
           <h4 class="text-gray-800">Now</h4>
           <h1 class="text-gray-800"><span class="uppercase text-blue-600 font-extrabold ml-10" style="font-size: 45px; font-style: normal;">Visualize</span> Stocks past performaces with Graphs and charts</h1>
-          <div class="">Add prediction image here</div>
+          <div class="text-red-500 text-3xl font-bold text-center" style="font-style: normal;">COMING SOON</div>
         </div>
       </div>
 
@@ -51,7 +51,7 @@
           <!-- CARD 1-->
           <div class="bg-gradient-to-t from-blue-700 to-blue-200 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
             <!-- PROFILE PIC -->
-            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+            <img class="object-cover rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="{{ url_for('static',filename='src/assets/vishal.jpg') }}" alt="Vishal's Photo" />
 
             <!-- TEXTS -->
             <p class="text-2xl font-semibold text-gray-800 mt-20">Vishal Patil</p>
@@ -59,13 +59,13 @@
 
             <!-- SOCIAL LINKS -->
             <div class="flex w-full justify-around">
-              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="https://github.com/SpecTEviL">
                 <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="https://www.linkedin.com/in/vishalrameshpatil">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="https://twitter.com/VishalPatil1810">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
               </a>
             </div>
@@ -74,7 +74,7 @@
           <!-- CARD 2-->
           <div class="bg-gradient-to-t from-purple-700 to-purple-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
             <!-- PROFILE PIC -->
-            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="{{ url_for('static',filename='src/assets/shivam.jpeg') }}" alt="Shivam's Photo" />
 
             <!-- TEXTS -->
             <p class="text-2xl font-semibold text-gray-800 mt-20">Shivam Karpe</p>
@@ -82,13 +82,13 @@
 
             <!-- SOCIAL LINKS -->
             <div class="flex w-full justify-around">
-              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="https://github.com/shivamk19">
                 <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="https://www.linkedin.com/in/shivam-karpe-60a10b1a6">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="https://twitter.com/shivam_karpe">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
               </a>
             </div>
@@ -97,7 +97,7 @@
           <!-- CARD 3-->
           <div class="bg-gradient-to-t from-pink-700 to-pink-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
             <!-- PROFILE PIC -->
-            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="{{ url_for('static',filename='src/assets/riya.jpeg') }}" alt="Riya's Photo" />
 
             <!-- TEXTS -->
             <p class="text-2xl font-semibold text-gray-800 mt-20">Riya Gupta</p>
@@ -105,10 +105,10 @@
 
             <!-- SOCIAL LINKS -->
             <div class="flex w-full justify-around">
-              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="https://github.com/RiyaGupta99">
                 <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="https://www.linkedin.com/in/riya-gupta-629642172/">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
               </a>
               <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="#">
@@ -120,21 +120,21 @@
           <!-- CARD 4-->
           <div class="bg-gradient-to-t from-yellow-700 to-yellow-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
             <!-- PROFILE PIC -->
-            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="{{ url_for('static',filename='src/assets/santanu.jpeg') }}" alt="Santanu's Photo" />
 
             <!-- TEXTS -->
-            <p class="text-2xl font-semibold text-gray-800 mt-20">Santanu</p>
+            <p class="text-2xl font-semibold text-gray-800 mt-20">Santanu Kumar</p>
             <p class="text-lg text-white">Team Member</p>
 
             <!-- SOCIAL LINKS -->
             <div class="flex w-full justify-around">
-              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="https://github.com/santanukumar666">
                 <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="https://www.linkedin.com/in/santanu-kumar0vjti0mumbai85621b191/">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="https://twitter.com/notsantanuk">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
               </a>
             </div>
@@ -143,7 +143,7 @@
           <!-- CARD 5-->
           <div class="bg-gradient-to-t from-green-700 to-green-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
             <!-- PROFILE PIC -->
-            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="{{ url_for('static',filename='src/assets/rohan.jpg') }}" alt="Rohan's Photo" />
 
             <!-- TEXTS -->
             <p class="text-2xl font-semibold text-gray-800 mt-20">Rohan Sawai</p>
@@ -151,10 +151,10 @@
 
             <!-- SOCIAL LINKS -->
             <div class="flex w-full justify-around">
-              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="https://github.com/rohansawai">
                 <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
               </a>
-              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="#">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="https://www.linkedin.com/in/rohan-sawai-646155169/">
                 <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
               </a>
               <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="#">
@@ -166,19 +166,19 @@
       </div>
 
       <!-- STATISTICS -->
-      <div class="bg-gray-100 px-20 sm:pb-10 mx-auto">
+      <div class="bg-gray-100 px-20 pb-10 mx-auto">
           <div class="w-full grid grid-cols-1 gap-10 md:grid-cols-3 justify-items-center">
-            <div class="w-40 mx-auto">
-                <span class="ml-3 text-7xl text-purple-600 font-extrabold">18+</span><br>
-                <span class="ml-9 text-2xl text-gray-800 font-semibold">Stocks</span>
+            <div class="w-50 mx-auto">
+                <span class="ml-3 text-5xl text-purple-600 font-extrabold">Yahoo</span><br>
+                <span class="ml-4 text-2xl text-gray-800 font-semibold">Finance API</span>
             </div>
-            <div class="w-40 mx-auto">
-              <span class="text-7xl text-pink-600 font-extrabold">720+</span><br>
-              <span class="ml-12 text-2xl text-gray-800 font-semibold">Days</span>
+            <div class="w-50 mx-auto">
+              <span class="ml-12 text-5xl text-pink-600 font-extrabold">Daily</span><br>
+              <span class="ml-1 text-2xl text-gray-800 font-semibold">Updated Database</span>
             </div>
-            <div class="w-40 mx-auto">
-              <span class="ml-3 text-7xl text-blue-600 font-extrabold">12+</span><br>
-              <span class="ml-4 text-2xl text-gray-800 font-semibold">Parameters</span>
+            <div class="w-50 mx-auto">
+              <span class="ml-2 text-5xl text-blue-600 font-extrabold">90%+</span><br>
+              <span class="ml-6 text-2xl text-gray-800 font-semibold">Accuracy</span>
             </div>
           </div>
       </div>

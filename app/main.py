@@ -90,8 +90,3 @@ def compare():
 @app.route('/pastperformance')
 def pastPerformance():
     return render_template('pastPerformance.html')
-
-
-if __name__ == '__main__':
-    app.secret_key='secret123'
-    app.run(debug=True)
