@@ -55,4 +55,9 @@ This project can be used by Banks, Brokarage houses and also Retail Traders to u
 
 
 ## Screenshots
-![Screenshot alt text](https://edtimes.in/wp-content/uploads/2018/09/NikeMeme10-640x633.jpg "Here is a screenshot")
+![Screenshot alt text](https://raw.githubusercontent.com/SpecTEviL/Stockrr-App/main/screenshots/Landing-page.png "Landing Page")
+1. Landing Page
+![Screenshot alt text](https://raw.githubusercontent.com/SpecTEviL/Stockrr-App/main/screenshots/Prediction-page.png "Before Prediction Page")
+2. Before Prediction Page
+![Screenshot alt text](https://raw.githubusercontent.com/SpecTEviL/Stockrr-App/main/screenshots/Predicted-price.png "Predicted Page")
+3. Price Predicted Page
