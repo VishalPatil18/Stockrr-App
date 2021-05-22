@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-10 h-screen">
+        <div class="hidden md:col-span-2 lg:col-span-2 md:block">
+            {% include 'includes/_sidebar.html' %}
+        </div>
+        <div class="md:col-span-4 lg:col-span-8 bg-white">
+            <div class="md:float-right">
+                {% include 'includes/_navbar.html' %}
+            </div>
+						<div class="md:hidden px-5 pt-8 grid grid-cols-3 gap-4 text-center">
+							<a href="/predict">
+                <div class="inline-block p-2 text-white rounded-md w-full bg-blue-800 text-lg hover:bg-transparent border-2 border-transparent hover:border-blue-800 hover:text-blue-800 hover:shadow-xl duration-200">Predict</div>
+              </a>
+              <a href="/compare">
+                <div class="inline-block p-2 text-white rounded-md w-full bg-blue-800 text-lg hover:bg-transparent border-2 border-transparent hover:border-blue-800 hover:text-blue-800 hover:shadow-xl duration-200">Compare</div>
+              </a>
+              <a href="/pastperformance">
+                <div class="inline-block p-2 text-white rounded-md w-full bg-blue-800 text-lg hover:bg-transparent border-2 border-transparent hover:border-blue-800 hover:text-blue-800 hover:shadow-xl duration-200">Visualize</div>
+              </a>
+						</div>
+            <div class="container mx-auto py-10 px-6 text-gray-800 text-4xl font-bold">
+                Predict <br class="md:hidden"><span class="text-lg italic text-gray-400 font-medium">Predict the future price of stocks</span>
+            </div>
+            <div class="p-5">
+				<div class="bg-gray-50 shadow-2xl w-5/6 p-5 mx-auto">
+					<form action="/predictalgo" method="POST">
+						<div class="mb-6">
+							<label class="text-xl text-gray-800 font-bold" id="icon" for="name">Company Name</label>
+							<input class="p-4 border border-gray-400 focus:border-gray-600" type="text" name="companyname" id="name" placeholder="Yahoo Finance Symbol" required/>
+						</div>
+						<div class="bg-gray-200 block p-2 sm:p-10 text-center">
+							<a href="https://in.finance.yahoo.com/" target="_blank">
+								<div class="bg-yellow-300 text-sm text-blue-700 p-3 mx-auto rounded-full">
+									Dont know your Company Symbol?<br class="sm:hidden">Find it from here
+								</div>
+							</a>
+							<div class="mt-5">
+								<span class="text-red-600 text-xl font-bold mt-10">NOTE: Please wait for 1 min while our model makes the predictions</span>
+							</div>
+							<button class="py-2 w-60 text-white text-xl mx-auto mt-10 text-center rounded-md bg-blue-700 hover:-translate-y-2 transform transition duration-200 hover:scale-125 hover:shadow-xl" type="submit" href="/predict">Predict</button>
+							<h2 class="text-gray-900 text-2xl font-bold mt-10">{{pred}}</h2>
+						</div>
+					</form>
+				</div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="hidden md:block p-4" style="background: url('../static/src/assets/bg-pat.png') #262527 repeat;">
+			<div class="text-center text-white text-xl font-semibold">
+				Made with ❤️
+			</div>
+		</div>
+{% endblock %}

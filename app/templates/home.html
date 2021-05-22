@@ -1,0 +1,215 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+    <header class="bgImg h-screen" style="background: url(../static/src/assets/bgImg.jpg) no-repeat fixed; background-size: 100% 100%; background-size: cover;">
+      {% include 'includes/_navbar.html' %}
+      <div class="mt-16 mx-auto backdrop-filter backdrop-blur-lg bg-opacity-70 bg-gray-800 border-2 border-white rounded-xl p-5 w-5/6 sm:w-2/3">
+        <p class="text-white font-light italic" style="font-size: 25px;">
+          Hello there, I'm<br>
+          <span class="uppercase text-white text-5xl md:text-8xl font-extrabold ml-10" style="font-style: normal;">Stockrr</span><br>
+          <span class="ml-10">I can</span><br>
+        </p>
+        <div class="block sm:inline-block">
+          <span class="uppercase text-purple-600 font-extrabold ml-10" style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white;font-size: 45px; font-style: normal;">Predict</span>
+          <span class="uppercase text-pink-600 font-extrabold ml-10"  style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white;font-size: 45px; font-style: normal;"> compare</span>
+          <span class="uppercase text-blue-600 font-extrabold ml-10"  style="-webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white;font-size: 45px; font-style: normal;">visualize</span><br>
+        </div>
+        <p class="text-white font-light italic" style="font-size: 25px;">
+          <span class="ml-10">various Stocks.</span>
+        </p>
+      </div>
+      <a href="/predict">
+        <div class="py-2 w-60 text-white text-xl mx-auto mt-10 text-center rounded-full bg-gradient-to-t from-gray-600 to-gray-900 hover:-translate-y-2 transform transition duration-200 hover:scale-125 hover:shadow-xl">Get Started</div>
+      </a>
+    </header>
+
+    <!-- INFO CARDS -->
+      <div class="bg-gray-100 px-5 sm:px-20 py-12 mx-auto">
+        <div class="transform -translate-y-24 shadow-xl bg-white px-10 py-6 italic">
+            <h4 class="text-gray-800">Now</h4>
+            <h1 class="text-gray-800"><span class="uppercase text-purple-600 font-extrabold ml-10" style="font-size: 45px; font-style: normal;">Predict</span> Stock Prices Easily and accurately</h1>
+            <div class="">Add prediction image here</div>
+        </div>
+        <div class="transform -translate-y-12 shadow-xl bg-white px-10 py-6 italic">
+          <h4 class="text-gray-800">Now</h4>
+          <h1 class="text-gray-800"><span class="uppercase text-pink-600 font-extrabold ml-10" style="font-size: 45px; font-style: normal;">Compare</span> Between different Stocks just by one click</h1>
+          <div class="">Add comparison image here</div>
+        </div>
+        <div class="transform -translate-y-0 shadow-xl bg-white px-10 py-6 italic">
+          <h4 class="text-gray-800">Now</h4>
+          <h1 class="text-gray-800"><span class="uppercase text-blue-600 font-extrabold ml-10" style="font-size: 45px; font-style: normal;">Visualize</span> Stocks past performaces with Graphs and charts</h1>
+          <div class="">Add prediction image here</div>
+        </div>
+      </div>
+
+      <!-- OUR TEAM -->
+      <div>
+        <div class="bg-gray-100 px-5 sm:px-20 py-12 mx-auto"><span class="uppercase font-extrabold mx-auto text-2xl">Our Fantastic Team</span></div>
+        <div class="bg-gray-100 px-20 pt-12 pb-0 sm:pb-12 mx-auto w-full grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <!-- CARD 1-->
+          <div class="bg-gradient-to-t from-blue-700 to-blue-200 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
+            <!-- PROFILE PIC -->
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+
+            <!-- TEXTS -->
+            <p class="text-2xl font-semibold text-gray-800 mt-20">Vishal Patil</p>
+            <p class="text-lg text-white">Team Member</p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="flex w-full justify-around">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-blue-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 2-->
+          <div class="bg-gradient-to-t from-purple-700 to-purple-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
+            <!-- PROFILE PIC -->
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+
+            <!-- TEXTS -->
+            <p class="text-2xl font-semibold text-gray-800 mt-20">Shivam Karpe</p>
+            <p class="text-lg text-white">Team Member</p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="flex w-full justify-around">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-purple-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 3-->
+          <div class="bg-gradient-to-t from-pink-700 to-pink-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
+            <!-- PROFILE PIC -->
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+
+            <!-- TEXTS -->
+            <p class="text-2xl font-semibold text-gray-800 mt-20">Riya Gupta</p>
+            <p class="text-lg text-white">Team Mentor</p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="flex w-full justify-around">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-pink-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 4-->
+          <div class="bg-gradient-to-t from-yellow-700 to-yellow-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
+            <!-- PROFILE PIC -->
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+
+            <!-- TEXTS -->
+            <p class="text-2xl font-semibold text-gray-800 mt-20">Santanu</p>
+            <p class="text-lg text-white">Team Member</p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="flex w-full justify-around">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-yellow-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
+              </a>
+            </div>
+          </div>
+
+          <!-- CARD 5-->
+          <div class="bg-gradient-to-t from-green-700 to-green-100 h-60 w-full rounded-3xl relative flex flex-col items-center justify-between p-5 transition-all duration-150 mb-20 mx-auto shadow-xl">
+            <!-- PROFILE PIC -->
+            <img class="rounded-full w-28 h-28 shadow-sm absolute -top-10 transform md:scale-110 duration-700" src="https://i.stack.imgur.com/l60Hf.png" alt="" />
+
+            <!-- TEXTS -->
+            <p class="text-2xl font-semibold text-gray-800 mt-20">Rohan Sawai</p>
+            <p class="text-lg text-white">Team Member</p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="flex w-full justify-around">
+              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-7 h-7" src="{{ url_for('static',filename='src/assets/github.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/linkedin.svg') }}" />
+              </a>
+              <a class="rounded-full w-8 h-8 shadow-sm bg-green-300 hover:scale-110 transition transform duration-200" href="#">
+                <img class="m-auto mt-1 w-6 h-6" src="{{ url_for('static',filename='src/assets/twitter.svg') }}" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATISTICS -->
+      <div class="bg-gray-100 px-20 sm:pb-10 mx-auto">
+          <div class="w-full grid grid-cols-1 gap-10 md:grid-cols-3 justify-items-center">
+            <div class="w-40 mx-auto">
+                <span class="ml-3 text-7xl text-purple-600 font-extrabold">18+</span><br>
+                <span class="ml-9 text-2xl text-gray-800 font-semibold">Stocks</span>
+            </div>
+            <div class="w-40 mx-auto">
+              <span class="text-7xl text-pink-600 font-extrabold">720+</span><br>
+              <span class="ml-12 text-2xl text-gray-800 font-semibold">Days</span>
+            </div>
+            <div class="w-40 mx-auto">
+              <span class="ml-3 text-7xl text-blue-600 font-extrabold">12+</span><br>
+              <span class="ml-4 text-2xl text-gray-800 font-semibold">Parameters</span>
+            </div>
+          </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="" style="background: url('../static/src/assets/bg-pat.png') #262527 repeat;">
+        <div class="w-full sm:w-2/3 mx-auto">
+          <div class="w-full grid gap-10 grid-cols-2 mb-4">
+            <div class="w-full sm:w-3/5 mx-auto mt-5 pl-3">
+              <a href="/predict">
+                <div class="py-2 text-white text-lg hover:translate-x-2 transform transition duration-200">> Predict</div>
+              </a>
+              <a href="/compare">
+                <div class="py-2 text-white text-lg hover:translate-x-2 transform transition duration-200">> Compare</div>
+              </a>
+              <a href="/pastperformance">
+                <div class="py-2 text-white text-lg hover:translate-x-2 transform transition duration-200">> Past Performance</div>
+              </a>
+            </div>
+            <div class="w-40 mx-auto mt-5">
+              <a href="/predict">
+                <div class="py-2 text-white text-lg mb-5 text-center rounded-full bg-blue-500 hover:translate-x-2 transform transition duration-200">Get Started</div>
+              </a>
+              <a href="/aboutus">
+                <div class="py-2 text-white text-lg text-center rounded-full bg-blue-500 hover:translate-x-2 transform transition duration-200">About Us</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-white text-xl font-semibold">
+          Made with ❤️
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,47 @@
+/* bgImg Section */
+header.bgImg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+header.bgImg .row {
+  position: relative;
+}
+
+/* Contact Banner */
+.contact-banner {
+  color: #fff;
+  padding: 6em;
+}
+.contact-banner h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.navbutton{
+  @apply text-2xl;
+  @apply rounded-full;
+  @apply bg-blue-700;
+  @apply px-4;
+  @apply py-3;
+  @apply uppercase;
+  @apply shadow-sm;
+  @apply hover:shadow-xl;
+  @apply text-white;
+  @apply cursor-pointer;
+  @apply items-center;
+  @apply inline-block;
+  @apply w-5/12;
+  @apply transition;
+  @apply transform;
+  @apply duration-200;
+  @apply hover:-translate-y-2;
+  @apply hover:scale-110;
+}

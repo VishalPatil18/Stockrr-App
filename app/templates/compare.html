@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-10 h-screen">
+        <div class="hidden md:col-span-2 lg:col-span-2 md:block">
+            {% include 'includes/_sidebar.html' %}
+        </div>
+        <div class="md:col-span-4 lg:col-span-8 bg-white">
+            <div class="md:float-right">
+                {% include 'includes/_navbar.html' %}
+            </div>
+						<div class="md:hidden px-5 pt-8 grid grid-cols-3 gap-4 text-center">
+							<a href="/predict">
+                <div class="inline-block p-2 text-white rounded-md w-full bg-blue-800 text-lg hover:bg-transparent border-2 border-transparent hover:border-blue-800 hover:text-blue-800 hover:shadow-xl duration-200">Predict</div>
+              </a>
+              <a href="/compare">
+                <div class="inline-block p-2 text-white rounded-md w-full bg-blue-800 text-lg hover:bg-transparent border-2 border-transparent hover:border-blue-800 hover:text-blue-800 hover:shadow-xl duration-200">Compare</div>
+              </a>
+              <a href="/pastperformance">
+                <div class="inline-block p-2 text-white rounded-md w-full bg-blue-800 text-lg hover:bg-transparent border-2 border-transparent hover:border-blue-800 hover:text-blue-800 hover:shadow-xl duration-200">Visualize</div>
+              </a>
+						</div>
+            <div class="container mx-auto py-10 px-6 text-gray-800 text-4xl font-bold">
+              Compare <br class="md:hidden"><span class="text-lg italic text-gray-400 font-medium">Compare the performance of two stocks one on one</span>
+            </div>
+            <div class="p-5 mx-auto"> 
+              <p class="p-2 text-6xl font-extrabold uppercase text-red-600 inline-block">Coming Soon</p>
+              <!-- <p class="p-2 text-xl text-gray-800 inline-block">Select the first Stock</p>
+              <select class="inline-block p-2 text-lg" id="stockList" onchange="favTutorial()">
+                  <option>stock1</option>  
+                  <option>stock2</option>  
+                  <option>stock3</option>  
+                  <option>stock4</option>  
+              </select>
+              <span class="px-5 inline-block">vs</span>
+              <p class="p-2 text-xl text-gray-800 inline-block">Select the Second Stock</p>
+              <select class="inline-block p-2 text-lg" id="stockList" onchange="favTutorial()">
+                  <option>stock1</option>  
+                  <option>stock2</option>  
+                  <option>stock3</option>  
+                  <option>stock4</option>
+              </select> -->
+          </div>
+          <!-- <div>
+            <input class="py-2 px-4 w-52 text-xl m-5 bg-blue-800 text-white uppercase rounded-lg cursor-pointer" type="submit" value="Compare">
+          </div> -->
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="hidden md:block p-4" style="background: url('../static/src/assets/bg-pat.png') #262527 repeat;">
+			<div class="text-center text-white text-xl font-semibold">
+				Made with ❤️
+			</div>
+		</div>
+{% endblock %}
